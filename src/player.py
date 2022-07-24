@@ -1,5 +1,6 @@
 # Constants
 number_of_stones = 7
+points = 0
 
 class Player():
     def __init__(self):
@@ -38,3 +39,9 @@ class Player():
                 self.stones_in_use[i] = False
                 return 1
         return -1
+    
+    def has_won(self):
+        return points == number_of_stones
+    
+    def add_point(self):
+        points += 1
